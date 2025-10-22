@@ -24,9 +24,9 @@ body {
   border: 1px solid #5f9341;
 }
 
+
 #delete-btn {
   background-color: white;
-  border: none;
   color: #5f9341;
   padding: 10px 20px;
   cursor: pointer;

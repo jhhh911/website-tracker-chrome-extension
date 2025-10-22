@@ -22,7 +22,7 @@ tabBtn.onclick = function () {
 function render(arr) {
   let listItems = "";
   arr.forEach(lead => {
-    listItems += `<li><a href="#" target="blank">${lead}</a></li>`;
+    listItems += `<li><a href="#" target="_blank">${lead}</a></li>`;
   });
   ulEl.innerHTML = listItems;
 }
