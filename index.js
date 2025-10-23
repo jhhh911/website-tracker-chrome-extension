@@ -4,6 +4,7 @@ import {
   ref,
   push,
   onValue,
+  remove,
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 const firebaseConfig = {
@@ -34,10 +35,16 @@ inputBtn.onclick = function () {
   inputEl.value = "";
 };
 
-deleteBtn.onclick = function () {};
+deleteBtn.onclick = function () {
+  remove(referenceInDB);
+  ulEl.innerHTML = "";
+};
 
 onValue(referenceInDB, function (snapshot) {
- const snapshotValues =  snapshot.val()
- const leads = Object.values(snapshotValues)
- render(leads)
+  const snapshotDoesExists = snapshot.exists();
+  if (snapshotDoesExists) {
+    const snapshotValues = snapshot.val();
+    const leads = Object.values(snapshotValues);
+    render(leads);
+  }
 });
