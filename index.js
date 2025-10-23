@@ -9,8 +9,7 @@ import {
 
 const firebaseConfig = {
   databaseURL:
-    "",
-  // databaseURL: process.env.DATABASE_URL
+    "https://leads-tracker-app-b8f24-default-rtdb.asia-southeast1.firebasedatabase.app",
 };
 
 const app = initializeApp(firebaseConfig);
